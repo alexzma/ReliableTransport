@@ -55,23 +55,40 @@ the same as the ack number expected.
 
 # Libraries
 errno.h
+
 string.h
+
 string
+
 vector
+
 chrono
+
 tuple
+
 sys/types.h
+
 sys/socket.h
+
 sys/stat.h
+
 fcntl.h
+
 netdb.h
+
 arpa/inet.h
+
 unistd.h
+
 stdio.h
+
 stdlib.h
 
 # Online Resources
-I used the below online resources to access the linux man pages.
+I used the below online resources to access the linux man pages:
+
 Open Group Base Specifications Issue 6 (pubs.opengroup.org)
+
 die.net (linux.die.net)
+
 man7.org
