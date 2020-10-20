@@ -1,8 +1,4 @@
-Name: Alexander Ma
-Email: alexanderzma@hotmail.com
-UID: 105093055
-
-Design:
+# Design
 The server and client initialize their sequence numbers to random values, and 
 base their ack values on the value of the incoming headers. The server and 
 client use perpetual while loops to run their programs. At the beginning of 
@@ -19,7 +15,7 @@ fin messages are in the shutdown sequence, and the connection closes after
 the client sends an ack in response to the server's fin message. The protocol 
 used is selective repeat.
 
-Problems:
+# Problems
 I had trouble converting from integers and longs to bits and back again. I 
 eventually figured out how to convert the values by trial and error with bit 
 operators in a standalone main method. Then, I placed all my conversions in 
@@ -40,7 +36,7 @@ being sent, rather than having it based on the value of the sequence number
 of the next packet. This ensured that the ack number received would always be 
 the same as the ack number expected.
 
-Libraries:
+# Libraries
 errno.h
 string.h
 string
@@ -57,7 +53,7 @@ unistd.h
 stdio.h
 stdlib.h
 
-Online Resources:
+# Online Resources
 I used the below online resources to access the linux man pages.
 Open Group Base Specifications Issue 6 (pubs.opengroup.org)
 die.net (linux.die.net)
