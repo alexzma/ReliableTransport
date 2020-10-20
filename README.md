@@ -1,9 +1,9 @@
 # Running
 Compile the server and client with "make".
 
-Then, run the server with "./server <PORT>", where <PORT> is the port number you wish to run the server.
+Then, run the server with "./server PORT", where PORT is the port number you wish to run the server.
   
-After that, you can run the client with "./client <HOSTNAME-OR-IP> <PORT> <FILENAME>". The <HOSTNAME-OR-IP> should be localhost or whichever name is your default ip address. <PORT> is the port specified in the server command. <FILENAME> is the file that you wish to send to the server.
+After that, you can run the client with "./client HOSTNAME-OR-IP PORT FILENAME". The HOSTNAME-OR-IP should be localhost or whichever name is your default ip address. PORT is the port specified in the server command. FILENAME is the file that you wish to send to the server.
 
 The client command will send the file to the server in batches, where the server will then create a file with its contents in the local directory. Both commands will log diagnostics when sending and receiving messages.
 
