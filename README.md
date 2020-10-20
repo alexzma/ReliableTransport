@@ -7,6 +7,8 @@ After that, you can run the client with "./client <HOSTNAME-OR-IP> <PORT> <FILEN
 
 The client command will send the file to the server in batches, where the server will then create a file with its contents in the local directory. Both commands will log diagnostics when sending and receiving messages.
 
+The server and client executables, the tar.gz file, and server output files can be removed by "make clean".
+
 The README.md, Makefile, and files needed for compilation can be compressed into a tar.gz file using "make dist".
 
 Packet loss can be simulated on linux machines by running "make test" before running the server and client. This command requires root permission. This packet loss simulation will affect all messages between processes on the local machine, so it is best used when other networked processes are not running. The server and client are able to handle the packet loss, resending lost packets. However, the file transfer takes longer.
