@@ -1,4 +1,19 @@
-# Design
+# Running
+Compile the server and client with "make".
+
+Then, run the server with "./server <PORT>", where <PORT> is the port number you wish to run the server.
+  
+After that, you can run the client with "./client <HOSTNAME-OR-IP> <PORT> <FILENAME>". The <HOSTNAME-OR-IP> should be localhost or whichever name is your default ip address. <PORT> is the port specified in the server command. <FILENAME> is the file that you wish to send to the server.
+
+The client command will send the file to the server in batches, where the server will then create a file with its contents in the local directory. Both commands will log diagnostics when sending and receiving messages.
+
+The README.md, Makefile, and files needed for compilation can be compressed into a tar.gz file using "make dist".
+
+Packet loss can be simulated on linux machines by running "make test" before running the server and client. This command requires root permission. This packet loss simulation will affect all messages between processes on the local machine, so it is best used when other networked processes are not running. The server and client are able to handle the packet loss, resending lost packets. However, the file transfer takes longer.
+
+Packet loss simulation can be ended by "make endtest". This command also requires root permission.
+
+# Messaging Design
 The server and client initialize their sequence numbers to random values, and 
 base their ack values on the value of the incoming headers. The server and 
 client use perpetual while loops to run their programs. At the beginning of 
